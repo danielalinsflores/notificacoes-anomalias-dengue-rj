@@ -122,11 +122,32 @@ python src/cleaning/clean_data.py
 
 python src/cleaning/load_to_postgres.py
 
+### Detecção de anomalias (Z-score, metodologia leave-one-out)
 
+Aplicando Z-score por semana epidemiológica, comparando cada ano contra a 
+baseline dos *outros* anos (evitando que o próprio outlier distorça sua 
+própria régua de comparação), **39 semanas foram sinalizadas como anomalia** 
+(Z-score > 2).
+
+**Achado principal:** quase todas as anomalias detectadas pertencem a 2024 
+(Z-scores de até 80), confirmando estatisticamente que 2024 foi um ano 
+atípico, não apenas "mais alto" que a média.
+
+**Achado de destaque — alerta precoce:** as semanas epidemiológicas **46 a 52 
+de 2023** (novembro/dezembro) já aparecem marcadas como anomalia, com Z-score 
+crescente semana a semana (de 5,05 até 18,17). Isso indica que a metodologia 
+teria sinalizado a escalada de casos **antes da virada do ano**, quando a 
+explosão de 2024 ainda estava em estágio inicial — o tipo de sinal de alerta 
+precoce que justifica o valor prático desse tipo de análise para gestores de 
+saúde.
+
+**Limitação conhecida:** Z-scores extremamente negativos observados em 2022 
+refletem baixa variância na baseline de comparação (apenas 2 anos disponíveis 
+para leave-one-out), não anomalias reais de queda. O método é mais confiável 
+para detectar picos do que quedas, dado o tamanho da amostra histórica (3 anos).
 
 ## Próximos passos
 
-- [ ] Detecção de anomalias via Z-score/IQR, comparando com o esperado por semana epidemiológica
 - [ ] Validação das anomalias contra o InfoDengue e notícias de surtos conhecidos
 - [ ] Dashboard executivo no Power BI
 - [ ] Publicação de análise no LinkedIn/Medium com os principais insights
