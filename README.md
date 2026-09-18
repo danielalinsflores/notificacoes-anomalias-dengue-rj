@@ -124,6 +124,8 @@ python src/cleaning/load_to_postgres.py
 
 ### Detecção de anomalias (Z-score, metodologia leave-one-out)
 
+![Série temporal de notificações de dengue com anomalias detectadas](dashboards/serie_temporal_anomalias.png)
+
 Aplicando Z-score por semana epidemiológica, comparando cada ano contra a 
 baseline dos *outros* anos (evitando que o próprio outlier distorça sua 
 própria régua de comparação), **39 semanas foram sinalizadas como anomalia** 
