@@ -143,6 +143,14 @@ explosão de 2024 ainda estava em estágio inicial — o tipo de sinal de alerta
 precoce que justifica o valor prático desse tipo de análise para gestores de 
 saúde.
 
+**Validação externa:** o Decreto Estadual nº 48.969/2024 (RJ), que declarou emergência de 
+saúde pública em 21/02/2024, cita que o monitoramento da Secretaria de Estado de Saúde já 
+identificava, desde dezembro de 2023, um aumento de casos acima do esperado para o período — 
+confirmando, com fonte oficial, o sinal de alerta precoce detectado de forma independente 
+pela metodologia deste projeto nas semanas 46-52/2023.
+
+Fonte: [Decreto nº 48.969/2024 - RJ](https://leisestaduais.com.br/rj/decreto-n-48969-2024-rio-de-janeiro-decreto-no-48-969-21-de-fevereiro-de-2024-declara-situacao-de-emergencia-no-ambito-da-saude-publica-no-estado-do-rio-de-janeiro-em-razao-de-epidemia-por-arboviroses-dengue-e-da-outras-providencias)
+
 **Limitação conhecida:** Z-scores extremamente negativos observados em 2022 
 refletem baixa variância na baseline de comparação (apenas 2 anos disponíveis 
 para leave-one-out), não anomalias reais de queda. O método é mais confiável 
@@ -162,7 +170,6 @@ O arquivo `.pbix` está disponível em `dashboards/dashboard_dengue_rj.pbix`.
 
 ## Próximos passos
 
-- [ ] Validação das anomalias contra o InfoDengue e notícias de surtos conhecidos
 - [ ] Publicação de análise no LinkedIn/Medium com os principais insights
 
 
