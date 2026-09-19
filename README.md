@@ -148,10 +148,21 @@ refletem baixa variância na baseline de comparação (apenas 2 anos disponívei
 para leave-one-out), não anomalias reais de queda. O método é mais confiável 
 para detectar picos do que quedas, dado o tamanho da amostra histórica (3 anos).
 
+## 📈 Dashboard executivo (Power BI)
+
+![Dashboard de detecção de anomalias](dashboards/dashboard_preview.png)
+
+O dashboard consolida os KPIs principais (total de casos, anomalias 
+detectadas, variação percentual, alerta mais precoce), a série temporal com 
+anomalias destacadas, e um filtro interativo por ano. Construído conectando 
+o Power BI diretamente ao PostgreSQL, reaproveitando a mesma query SQL de 
+detecção de anomalias (Z-score, leave-one-out) validada anteriormente.
+
+O arquivo `.pbix` está disponível em `dashboards/dashboard_dengue_rj.pbix`.
+
 ## Próximos passos
 
 - [ ] Validação das anomalias contra o InfoDengue e notícias de surtos conhecidos
-- [ ] Dashboard executivo no Power BI
 - [ ] Publicação de análise no LinkedIn/Medium com os principais insights
 
 
